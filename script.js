@@ -4,8 +4,15 @@ const chatMessages = document.getElementById("chat-messages");
 const chatInput = document.getElementById("chat-input");
 const chatSend = document.getElementById("chat-send");
 
+let hasGreeted = false;
+
 chatToggle.addEventListener("click", () => {
   chatBox.classList.toggle("hidden");
+
+  if (!hasGreeted) {
+    addMessage("Hey buddy! I'm the mini version of Ajay to answer questions about  his skills, projects, and background. Ask me anything! lets go through his profile", "bot");
+    hasGreeted = true;
+  }
 });
 
 function addMessage(text, sender) {
