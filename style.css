@@ -597,3 +597,16 @@ section {
   padding: 0 1rem;
   cursor: pointer;
 }
+
+#chat-header {
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+}
+
+#chat-header span {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
