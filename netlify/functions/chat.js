@@ -64,7 +64,7 @@ ${knowledgeBase}`;
 
     const reply =
       data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-  "The model is a bit busy right now — please try asking again in a moment.";
+  `DEBUG: ${JSON.stringify(data)}`;
 
     return new Response(JSON.stringify({ reply }), {
       status: 200,
