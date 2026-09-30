@@ -43,7 +43,7 @@ ${knowledgeBase}`;
 
   try {
     const apiKey = process.env.GEMINI_API_KEY;
-    const models = ["gemini-2.5-flash", "gemini-2.5-flash-lite"];
+    const models = ["gemini-2.5-flash", "gemini-3.5-flash-lite"];
     let data;
 
     for (const model of models) {
@@ -64,7 +64,7 @@ ${knowledgeBase}`;
 
     const reply =
       data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-  `DEBUG: ${JSON.stringify(data)}`;
+  "The model is a bit busy right now — please try asking again in a moment.";
 
     return new Response(JSON.stringify({ reply }), {
       status: 200,
